@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FORM APPLICATION</title>
+</head>
+<body>
+    <form action="success.html" method="post">
+        <h2>Application Form</h2>
+        <table border="0" cellpadding="8" cellspacing="0">
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Skills</td>
+                <td>
+                    <label><input type="checkbox" name="skills" value="python"> Python</label>
+                    <label><input type="checkbox" name="skills" value="java"> Java</label>
+                    <label><input type="checkbox" name="skills" value="c++"> C++</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number</label></td>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><textarea id="address" name="address" rows="4" cols="50" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="college">College Name</label></td>
+                <td><input type="text" id="college" name="college" required></td>
+            </tr>
+            <tr>
+                <td><label for="degree">Degree</label></td>
+                <td>
+                    <select id="degree" name="degree" required>
+                        <option value="">-- Select Degree --</option>
+                        <option value="bsc">B.Sc</option>
+                        <option value="bca">BCA</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="msc">M.Sc</option>
+                        <option value="mba">MBA</option>
+                        <option value="phd">Ph.D</option>
+                        <option value="BE">B.E</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="district">District</label></td>
+                <td><input type="text" id="district" name="district" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
