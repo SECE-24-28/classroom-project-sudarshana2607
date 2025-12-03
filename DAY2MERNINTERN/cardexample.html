@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <h1>Responsive Flex Cards</h1>
+    </head>
+        <style>
+            h1{
+                color: rgb(255, 255, 255);
+            }
+            body
+            {
+                background-color:rgb(239, 128, 84);
+            }
+            .container{
+            height:50vh;
+            justify-content:baseline;
+            align-items:baseline;
+            gap:10px;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap
+        }
+       .card{
+             width:100px;
+             height:100px;
+             background-color:rgb(227, 148, 148);
+             color:rgb(0, 0, 0);
+             border: 1px;
+             }
+        </style>
+    <body>
+        <div class="container">
+            <div class="card">Card 1
+               <p> connect with games  </p>
+            </div>
+            <div class="card">Card 2
+             <p>  build the world </p>
+            </div>
+            <div class="card">Card 3
+             <p>   enjoy yourself </p>
+            </div>
+        </div>
+    </body>
+</html>

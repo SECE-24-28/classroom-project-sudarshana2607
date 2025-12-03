@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h1>Flexbox Demo</h1></title>
+</head>
+    <style>
+        .container{
+            height:100vh;
+            background-color: rgb(38, 136, 136);
+            justify-content:center;
+            align-items:top;
+            gap:10px;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap
+        }
+       .box{
+        border: 1px solid black;
+        border-radius: 10%;
+             width:200px;
+             height:200px;
+             background-color:white;
+             color:black;
+             flex:1;
+             padding:20px;
+             box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+             
+
+             
+}
+</style>
+<body>
+    <h1>RESPONSIVE FLEXBOX CARD</h1>
+    <div class="container"> 
+        <div class="box">
+<h1>Card 1</h1>
+            <p> This is a simple responsive card using FlexBox</p></div>
+
+        <div class="box">
+            <h1>Card 2</h1>
+        <p> Hi this Jhon,I am a lawer</p></div>
+
+        <div class="box">
+            <h1>Card 3</h1>
+        <p>Nature is a beautiful with many flora & fauna</p></div>
+    </div>
+</body>
+</html>
