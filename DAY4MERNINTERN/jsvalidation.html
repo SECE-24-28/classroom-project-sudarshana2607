@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body id="main">
+    <p id="para" style="color: red;"></p>
+    <label>username</label>
+    <input type="text" id="us"></input>
+    <label>mail</label>
+    <input type="text" id="ma"></input>
+    <button  type="submit" id="sub">submit</button>
+     <script>
+        let sub=document.getElementById("sub");
+        let us=document.getElementById("us");
+        let ma=document.getElementById("ma");
+        let para=document.getElementById("para");
+        sub.addEventListener("click",(e)=>
+    {
+        e.preventDefault();
+        if(us.value=="" || ma.value=="")
+        {
+            para.innerHTML="fields should not be empty";
+  
+        }
+        else
+        {
+            alert("form submitted successfully");
+            us.value="";
+            ma.value="";
+            para.innerHTML="";
+        }
+    })
+    </script>
+</body>
+</html>

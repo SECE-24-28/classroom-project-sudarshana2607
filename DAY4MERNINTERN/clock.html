@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>gallery</title>
+        
+        
+    </head>
+    <body>
+        <h1>digital clock</h1>
+        <p><span id="h">15</span>:<span id="m">00</span>:<span id="s">0</span></p>
+
+        <script>
+            let s=document.getElementById("s");
+            let m=document.getElementById("m");
+            let h=document.getElementById("h");
+            let i=0;
+            let j=0;
+            let k=15;
+            function time() 
+            {
+                i++;
+                s.innerHTML=i;
+           if(i>59)
+            {
+                i=0;
+                s.innerHTML=i;
+                j++;
+                m.innerHTML=j;
+                if(j>59)
+                {
+                    j=0;
+m.innerHTML=j;
+                    k++;
+                    h.innerHTML=k;
+                    if(k>23)
+                    {
+                        k=0;
+                        h.innerHTML=k;
+                    }
+                }
+            }
+        }
+setInterval(time,1000);
+        </script>
+        
+        
+    </body>
+    </html>

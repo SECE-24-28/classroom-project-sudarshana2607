@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TO DO LIST</title>
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.b1
+{
+    border:2px solid chocolate;
+    width:450px;
+    min-height:200px;
+    margin:50px auto;
+    padding:20px;
+    border-radius:10px;
+    background-color:#fed7b3;
+}
+.h1, .b1 h1
+{
+    text-align:center;
+    color:chocolate;
+    margin-bottom:15px;
+}
+
+
+.b1 input[type="text"]
+{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border-radius:5px;
+    border:2px solid chocolate;
+    font-size:16px;
+}
+.b1 input[type="text"]:focus{
+    border-color:brown;
+}
+.button
+{
+    padding:10px;
+    width:100%;
+    margin-top:10px;
+    border-radius:10px;
+    background-color:chocolate;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.2s;
+}
+.button:hover
+{
+    background-color:brown;
+}
+
+.b1 p{
+    background-color:chocolate;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+    margin-top:10px;
+    font-size:16px;
+    transition:0.2s;
+}
+.b1 p:hover{
+    background-color:brown;
+    transform:scale(1.02);
+}
+
+        </style>
+        <script>
+            let count =1;
+           function addTask()
+            {
+                let taskInput = document.getElementById("taskInput");
+                let task = taskInput.value;
+
+                if(task.trim() === "") {
+                    alert("Please enter a task.");
+                    return;
+                }
+
+                let taskItem = document.createElement("p");
+                taskItem.innerHTML = count+"."+task;
+
+                document.body.appendChild(taskItem);
+                 count++;
+                taskInput.value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="b1">
+            <h1>TO DO LIST</h1>
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+    </body>
+</html>

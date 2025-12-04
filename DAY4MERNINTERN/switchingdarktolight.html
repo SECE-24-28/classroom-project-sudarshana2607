@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SWITCH MODES</title>
+    <script>
+        let dark = false;  
+
+        function mode(){
+            let a = document.getElementById("main");
+            let b = document.getElementById("h1");
+
+            if(dark === false){
+                a.style.backgroundColor = "black";
+                b.style.color = "white";
+                b.innerHTML = "DARK MODE";
+                dark = true;
+            }
+            else{
+                a.style.backgroundColor = "white";
+                b.style.color = "black";
+                b.innerHTML = "LIGHT MODE";
+                dark = false;
+            }
+        }
+    </script>
+</head>
+
+<body id="main">
+    <h1 id="h1">LIGHT MODE</h1>
+    <button onclick="mode()">CLICK ME</button>
+</body>
+</html>

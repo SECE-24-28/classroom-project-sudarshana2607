@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <title>Styling at Runtime</title>
+        <script>
+            function press()
+            {
+                
+                let body=document.getElementById("main");
+                let hd=document.getElementById("hd1");
+                hd.innerHTML="Peacock is our national bird";
+                //hd.style.backgroundColor="Black";
+               // hd.style.color="White";
+               //alert("delection suceess");
+                //body.removeChild(hd);
+                //let hd=document.getElementById("hd1");
+                //hd.innerHTML="Peacock is our national bird";
+            }
+        </script>
+    </head>
+    <body id="main">
+        <h1 id="hd1">example </h1>
+        <button onclick="press()">Click Me</button>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body
+            {
+                color: rgb(40, 119, 189);
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="bt" onclick="press()">Click Me</button>
+        <script>
+            let btn=document.getElementById("bt");
+
+            btn.add.EventListener("Click",press);
+            function press()
+            {
+                alert("Success.....")
+            }
+        </script>
+    </body>
+</html>-->
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Styling at Runtime</title>
+        <script>
+            function press()
+            {
+                let body=document.getElementById("main");
+
+                let newText = document.createElement("p");
+                newText.innerHTML = "Peacock is our national bird";
+                body.appendChild(newText);
+            }
+        </script>
+    </head>
+    <body id="main">
+        <h1 id="hd1">example </h1>
+        <button onclick="press()">Click Me</button>
+    </body>
+</html>
+
