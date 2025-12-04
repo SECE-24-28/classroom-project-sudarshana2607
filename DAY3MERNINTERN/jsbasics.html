@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Cycle with Loop</title>
+
+    <script>
+        let num=0;
+        let arr=["C:/Users/sudarshana/Downloads/WhatsApp-Logo.wine.png","C:/Users/sudarshana/Downloads/facebook icon.png","C:/Users/sudarshana/Downloads/instagram logo.avif"];
+        function next(){
+            num++;
+            if(num>=3){
+                num=0;
+            }
+            
+            let img=document.getElementById("im");
+            img.src=arr[num];
+            
+        }
+        function pre(){
+              num--;
+            if(num<0) num=2;
+            let img=document.getElementById("im");
+            img.src=arr[num];
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Default first image -->
+    <img src="C:/Users/sudarshana/Downloads/WhatsApp-Logo.wine.png" width="350px" height="400px" id="im">
+
+    <br><br>
+
+    <button onclick="pre()">previous</button>
+    <button onclick="next()">next</button>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color:rgb(160, 134, 134);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .calculator-box{
+            text-align:center;
+        }
+
+        h1{
+            color:white;
+            margin-bottom:20px;
+        }
+
+        .calculator{
+            background-color:rgb(198, 108, 147);
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+            width:320px;
+        }
+
+        input[type="text"]{
+            width:90%;
+            padding:12px;
+            margin:10px 0;
+            border-radius:8px;
+            border:1px solid #e09a9f;
+            font-size:1rem;
+        }
+
+        input[type="button"]{
+            width:45%;
+            padding:12px;
+            margin:8px 5px;
+            border:none;
+            background:#ea7272;
+            color:white;
+            font-size:1rem;
+            border-radius:8px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        input[type="button"]:hover{
+            background:#ed57e8;
+            transform:translateX(-5px);
+        }
+    </style>
+
+    <script>
+        function demo(){
+                
+                let a=document.getElementById("t1").value;
+                let b=document.getElementById("t2").value;
+                let x=parseInt(a);
+                let y=parseInt(b);
+                let c=x+y;
+                document.getElementById("t3").value=c;
+            }
+            function demo1(){
+                let a=document.getElementById("t1").value;
+                let b=document.getElementById("t2").value;
+                let x=parseInt(a);
+                let y=parseInt(b);
+                let c=x-y;
+                document.getElementById("t3").value=c;
+            }
+            function demo2(){
+                let a=document.getElementById("t1").value;
+                let b=document.getElementById("t2").value;
+                let x=parseInt(a);
+                let y=parseInt(b);
+                let c=x*y;
+                document.getElementById("t3").value=c;
+            }
+            function demo3(){
+                let a=document.getElementById("t1").value;
+                let b=document.getElementById("t2").value;
+                let x=parseInt(a);
+                let y=parseInt(b);
+                let c=x/y;
+                document.getElementById("t3").value=c;
+            }
+    </script>
+</head>
+
+<body>
+
+    <div class="calculator-box">
+        <h1>SIMPLE CALCULATOR</h1>
+
+        <div class="calculator">
+            <input type="text" placeholder="Enter number 1" id="t1"/>
+            <input type="text" placeholder="Enter number 2" id="t2"/>
+            <input type="text" placeholder="Answer" id="t3"/>
+
+            <input type="button" value="ADD" onclick="demo()"/>
+            <input type="button" value="SUB" onclick="demo1()"/>
+            <input type="button" value="MUL" onclick="demo2()"/>
+            <input type="button" value="DIV" onclick="demo3()"/>
+        </div>
+    </div>
+
+</body>
+</html>
