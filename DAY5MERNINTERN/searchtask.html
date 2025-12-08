@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 60%;
+        margin-top: 10px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+    th {
+        background-color: lightgray;
+    }
+
+    /* Simple Button Styles */
+    button {
+        padding: 8px 15px;
+        margin: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #clearBtn {
+        background-color: #dc3545;
+    }
+    #clearBtn:hover {
+        background-color: #b52a36;
+    }
+</style>
+
+</head>
+<body>
+
+    <input type="text" id="t1">
+
+    <!-- ✔ Added Buttons Only -->
+    <button onclick="demo()">Search</button>
+    <button id="clearBtn" onclick="clearSearch()">Clear</button>
+
+    <table id="list">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+    let t1 = document.getElementById("t1");
+    let tb = document.getElementById("tbody");
+    
+    let frnds = [
+        {name:"Abu", email:"abu@mail.com", address:"Chennai"},
+        {name:"Arun", email:"arun@mail.com", address:"Coimbatore"},
+        {name:"Bala", email:"bala@mail.com", address:"Madurai"},
+        {name:"Bharat", email:"bharat@mail.com", address:"Trichy"},
+        {name:"Vimal", email:"vimal@mail.com", address:"Bangalore"},
+        {name:"Vinoth", email:"vinoth@mail.com", address:"Hyderabad"},
+        {name:"Shree", email:"shree@mail.com", address:"Pune"},
+        {name:"Yuva", email:"yuva@mail.com", address:"Delhi"},
+        {name:"Sureka", email:"sureka@mail.com", address:"Salem"},
+        {name:"Yesho", email:"yesho@mail.com", address:"Kochi"},
+        {name:"Thapas", email:"thapas@mail.com", address:"Mysore"},
+        {name:"Sudharshana", email:"sudharshana@mail.com", address:"Chennai"}
+    ];
+
+    function demo() {
+        tb.innerHTML = "";
+        frnds.forEach(frnd => {
+            if(frnd.name.toLowerCase().includes(t1.value.toLowerCase())) {
+                let row = document.createElement("tr");
+
+                row.innerHTML = 
+                    "<td><b>" + frnd.name + "</b></td>" +
+                    "<td>" + frnd.email + "</td>" +
+                    "<td>" + frnd.address + "</td>";
+
+                tb.appendChild(row);
+            }
+        });
+    }
+
+    // ✔ Added Clear Button Function
+    function clearSearch() {
+        t1.value = "";
+        demo();
+    }
+
+    t1.addEventListener("keyup", demo);
+    demo();
+    </script>
+
+</body>
+</html>

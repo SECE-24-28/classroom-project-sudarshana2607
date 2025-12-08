@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <Title>Title</Title>
+</head>
+<body>
+    <p id="pa"></p>
+    <script>
+        //1.for marking highlight of a object
+        /*let stu="vijay"
+        let para=document.getElementById("pa")
+        para.innerHTML= "<mark>"+stu+"</mark>"
+        //2.for key-value object 
+        let stud={na:"sitha",city:"cbe",mail:"sitha@gmail.com"}
+        let para=document.getElementById("pa")
+        para.innerHTML="<b>"+stud.na+"</b>"+"-"+stud.city+"-"+stud.mail*/
+        //3.with $ symbol
+        
+            let stu = {name:"Vijay",city:"chennai",mail:"vijay@gmail.com"}
+            let para=document.getElementById("pa")
+            para.innerHTML=`<b>${stu.name}</b> - ${stu.city} - ${stu.mail}`
+    </script>
+</body>
+</html>

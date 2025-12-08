@@ -1,0 +1,97 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+     <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+h1> fetch data from button</h1>
+<button id="bt" onclick="fetchrecord()">fetch info</button>
+<div id="main"></div>
+<script>
+   async function  fetchrecord(){
+    try(){
+        let r= await fetch("https://jsonplaceholder.typicode.com/users")
+        let data=await r.json()
+        let main =document.getElementById("main")
+        let btn=document.getElementById("bt")
+        main.innerHTML=""
+       
+        data.forEach((obj)=>{
+            let dv=document.createElement("div");
+            dv.innerHTML=`<br><b>${obj.name}</b> <br>- ${obj.username}<br> -${obj.email}`;
+            main.appendChild(dv);
+        })
+    }
+    catch(error){
+               document.getElementById("There is some error")
+        }
+    btn.add
+    }
+</script>
+</body>
+</html>-->
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+     
+     <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+        #bt{
+            padding: 10px 20px;
+            background-color: rgb(162, 112, 77);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #bt:hover{
+            background-color: brown;
+        }
+        #main div{
+            background: #f3f3f3;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid chocolate;
+            border-radius: 5px;
+        }
+     </style>
+    
+</head>
+<body >
+    
+     <button id="b">click me</button>
+     <p id="q"></p>
+     <table id="p" border="1"></table>
+     <script>
+        let b=document.getElementById("b");
+        let p=document.getElementById("p");
+        b.addEventListener("click",async ()=>{
+            p.innerHTML="";
+            let q=document.getElementById("q");
+            q.innerHTML="loading...";
+            const res=await fetch("https://jsonplaceholder.typicode.com/users");
+            const data=await res.json();
+            q.innerHTML="";
+p.innerHTML="<tr><th>ID</th><th>USERNAME</th><th>EMAIL</th></tr>";
+           data.forEach((item)=>{
+            let tr=document.createElement("tr");
+            tr.innerHTML=`<td>${item.id}</td><td>${item.name}</td><td>${item.email}</td>`;
+            p.appendChild(tr);
+           })
+        })
+
+    </script>
+</body>
+</html>
+    

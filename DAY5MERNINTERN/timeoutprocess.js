@@ -1,0 +1,9 @@
+console.log("p1");
+setTimeout(()=>
+{
+    console.log("p2")
+    setTimeout(()=>
+    {
+        console.log("p3")
+    },2000)
+},2000)
