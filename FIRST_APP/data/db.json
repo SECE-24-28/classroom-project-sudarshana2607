@@ -1,0 +1,26 @@
+[
+    {
+        "cid":1,
+        "cname":"java",
+        "cdur":"2 months"
+    },
+    {
+        "cid":2,
+        "cname":"c",
+        "cdur":"2 week"
+    },
+    {
+        "cid":3,
+        "cname":"javascript",
+        "cdur":"3 month"
+    },{
+        "cid":4,
+        "cname":"ai",
+        "cdur":"10 months"
+    },
+    {
+        "cid":5,
+        "cname":"C++",
+        "cdur":"4months"
+    }
+]
